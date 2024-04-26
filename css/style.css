@@ -158,3 +158,151 @@ strong {
 .navigation a:focus {
     color: #de5728;
 }
+
+/*ARTICLE*/
+.text-center {
+    
+    text-align: center;
+}
+
+.post-header {
+    height: 166px;
+    background: url('../img/bccv.jpg') center -200px no-repeat;
+}
+
+.post-title {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    background: #de5728;
+    padding: 18px 46px;
+    border-radius: 7px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-top: 36px;
+}
+
+.post-content {
+    padding-bottom: 150px;
+
+}
+
+.post-content h2 {
+    color: #323232;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.controls {
+    width: 642px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.controls a {
+    font-size: 26px;
+    font-weight: 300;
+    color: #39a3d4;
+    text-transform: uppercase;
+    padding: 0 25px;
+    line-height: 48px;
+    display: block;
+}
+
+.controls a:hover,
+.controls a:focus,
+.controls .selected a {
+    color: #fff;
+    background: #39a3d4;
+    border-radius: 4px;
+}
+
+.gallery {
+    font-size: 0;
+}
+
+.gallery a,
+.gallery img {
+	width: 383px;
+	height: 192px;
+}
+
+.gallery img {
+	vertical-align: middle;
+}
+/*FOOTER*/
+.pre-footer {
+    color: #fff;
+    background: #323232;
+    text-align: center;
+}
+
+.pre-footer .container {
+    width: 700px;
+    padding: 40px 0 60px 0;
+}
+
+.pre-footer p {
+    font-size: 16px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.pre-footer strong {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+footer {
+    font-size: 14px;
+}
+
+footer .container {
+    background: url('../img/horarT.png') left center no-repeat;
+}
+
+footer p {
+    color: #a6a6a6;
+    float: left;
+    padding-left: 200px;
+}
+
+footer p a {
+    color: #e75652;
+    font-weight: 600;
+}
+
+footer p,
+footer .menu {
+    margin: 32px 0 32px 0;
+}
+
+footer .menu {
+    color: #989898;
+    
+    font-weight: 600;
+    text-transform: uppercase;
+    float: right;
+}
+
+footer .menu a {
+    color: #989898;
+}
+
+footer .menu a:hover,
+footer .menu a:focus {
+    text-decoration: underline;
+}
+
+footer li:after {
+    content: '/';
+    color: #989898;
+    margin: 0 8px;
+}
+
+footer li:last-child:after {
+    content: '';
+}
