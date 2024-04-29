@@ -167,7 +167,12 @@ strong {
 
 .post-header {
     height: 166px;
-    background: url('../img/bccv.jpg') center -200px no-repeat;
+    background: url('../img/bg.jpeg') center -200px no-repeat;
+}
+
+.post-header-first {
+    height: 900px;
+    background: url('../img/coverU.jpeg') center  no-repeat;
 }
 
 .post-title {
@@ -181,6 +186,19 @@ strong {
     text-transform: uppercase;
     letter-spacing: -2px;
     margin-top: 36px;
+    
+}
+.post-title-first {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    background: #de562800;
+    padding: 18px 46px;
+    border-radius: 7px;
+    display: inline-block;
+    letter-spacing: -2px;
+    margin-top: 450px;
+    margin-left: 268px;
     
 }
 
@@ -306,4 +324,11 @@ footer li:after {
 
 footer li:last-child:after {
     content: '';
+}
+.about  {
+    color: #fff;
+    background: #323232;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
 }
