@@ -171,8 +171,8 @@ strong {
 }
 
 .post-header-first {
-    height: 900px;
-    background: url('../img/coverU.jpeg') center  no-repeat;
+    height: 470px;
+    background: url('../img/cover.jpeg') center  no-repeat;
 }
 
 .post-title {
@@ -197,7 +197,7 @@ strong {
     border-radius: 7px;
     display: inline-block;
     letter-spacing: -2px;
-    margin-top: 450px;
+    margin-top: 230px;
     margin-left: 268px;
     
 }
@@ -243,13 +243,23 @@ strong {
 }
 
 .gallery a,
-.gallery img {
+.gallery img,
+.gallery-about img {
 	width: 383px;
 	height: 192px;
 }
 
 .gallery img {
 	vertical-align: middle;
+}
+.gallery-about img {
+	vertical-align: left;
+}
+.gallery-about .pdata {
+    vertical-align: top;
+    float: right;
+    margin-right: 550px;
+    
 }
 /*FOOTER*/
 .pre-footer {
