@@ -20,6 +20,24 @@
     <![endif]-->
 </head>
 <body>
+    <div class="progress" v-show="showProgress"></div>
+    <script >
+        var better = document.querySelector('.progress');
+        var max = document.body.scrollHeight - innerHeight;
+        var scheduled = false;
+    
+        addEventListener('scroll', function() {
+            max = document.body.scrollHeight - innerHeight; 
+            if ( !scheduled ) {
+                scheduled = true;
+                setTimeout(function() {
+                    scheduled = false;
+                    var percent = (pageYOffset / max);
+                    better.style.transform = 'scaleX(' + percent + ')';
+                }, 100);
+            }
+        });
+    </script>
     <header>
         <div class="contact-bar">
             <div class="container">
@@ -58,7 +76,7 @@
         <article>
             <header class="post-header">
                 <div class="container">
-                    <h1 class="post-title">Portfólio mojich prác</h1>
+                    <h1 class="post-title"><a href="portfolio.html">Portfólio mojich prác</a></h1>
                 </div>
             </header>
             <div class="post-content">
@@ -68,7 +86,7 @@
                          o tebe a tvojej sikovnosti /osobnosti</h2>
                     
                     <ul class="menu controls"> 
-                        <li class="selected"><a href="index.html" >Vsetko</a></li>
+                        <li><a href="https://github.com/H0rar" >Certifikáty</a></li>
                         <li><a href="https://github.com/H0rar" >GitHub</a></li>
 					    <li><a href="https://www.facebook.com/dusan.rohar/">FaceBook</a></li>
 					    <li><a href="https://www.linkedin.com/in/du%C5%A1an-roh%C3%A1r-b0b53263/">LinkedIn</a></li>

@@ -19,6 +19,25 @@
     <script src="">https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js</script>
     <![endif]-->
 </head>
+<body>
+    <div class="progress" v-show="showProgress"></div>
+    <script >
+        var better = document.querySelector('.progress');
+        var max = document.body.scrollHeight - innerHeight;
+        var scheduled = false;
+    
+        addEventListener('scroll', function() {
+            max = document.body.scrollHeight - innerHeight; 
+            if ( !scheduled ) {
+                scheduled = true;
+                setTimeout(function() {
+                    scheduled = false;
+                    var percent = (pageYOffset / max);
+                    better.style.transform = 'scaleX(' + percent + ')';
+                }, 100);
+            }
+        });
+    </script>
     <header>
         <div class="contact-bar">
             <div class="container">
@@ -57,16 +76,20 @@
         <article>
             <header class="post-header">
                 <div class="container">
-                    <h1 class="post-title">Portfólio mojich prác</h1>
+                    <h1 class="post-title"><a href="portfolio.html">Portfólio mojich prác</a></h1>
                 </div>
             </header>
             <div class="post-content">
                 <div class="container">
 
-                    <h2 class="text-center">veta, kde sa hovorí
-                         o tebe a tvojej sikovnosti /osobnosti</h2>
+                    <h2 class="text-center">Robota a zábava? Vraj sa to nedá! Ale čo ak áno, kódenie môže a je funny. Vidieť ako zhluk navonok nezmyselných slov a čisel 
+                        dáva vzniknúť niečomu krásnemu. Od nuly odpodlahy. Ako keď sa stavia dom, ale s jedným veľkým rozdielom! Odstránenie "priečky", alebo pridanie 
+                        "izby" trvá len sekundu. To isté, ale milión krát iné. Som začínajúci programátor,jasné že neviem všetko, jasné že mám milión otázok, čoho však mám 
+                        dosť, je elán, chuť a ochota vrhnúť sa na každý nový projekt.
+                    </h2>
                     
                     <ul class="menu controls"> 
+                        <li><a href="https://github.com/H0rar" >Certifikáty</a></li>
                         <li><a href="https://github.com/H0rar" >GitHub</a></li>
 					    <li><a href="https://www.facebook.com/dusan.rohar/">FaceBook</a></li>
 					    <li><a href="https://www.linkedin.com/in/du%C5%A1an-roh%C3%A1r-b0b53263/">LinkedIn</a></li>
@@ -77,43 +100,156 @@
                             <img src="img/gt.jpg" alt="">
                         </a>
                         <ul class="pdata">
-                            <li>nakfjodlghsgnvsldjhgskdbg</li>
-                            <li>nakfjodlghsgnvsldjhgskdbg</li>
+                            <li>Narodený v najlepšom roku; 1988</li>
+                            <li>Manžel, otec dvoch malých čertíkov</li>
+                            <li>Gemerské Teplice, miesto ktoré ma formovalo od detstva</li>
+                            <li>Teplica je ako tvoja sestra, robíte si zle ale nemenili by si</li>
                         </ul>
                         <br>
                         <a href="https://gmk-ra.sk/">
                             <img src="img/gmkT.jpg" alt="">
                         </a>
                         <ul class="pdata">
-                            <li>nakfjodlghsgnvsldjhgskdbg</li>
-                            <li>nakfjodlghsgnvsldjhgskdbg</li>
+                            <li>Maturita v roku 2008</li>
+                            <li>PRVÉ Slovenské gymnázium (sorry literárne)</li>
+                            <li>Krásne spomienky na ľudí s ktorými vieš začať tam kde si skončil</li>
                         </ul>
                         <br>
                         <a href="https://sk.wikipedia.org/wiki/Stredoeur%C3%B3pska_vysok%C3%A1_%C5%A1kola_v_Skalici">
                             <img src="img/logoT.jpg" alt="">
-                        </a><br>
+                        </a>
+                        <ul class="pdata">
+                            <li>Úspešné štátnice vroku 2013 v odbore Medzinárodné vzťahy</li>
+                            <li>Skutočná voľnosť, ale aj zodpovednosť</li>
+                            <li>Špičkový Česko-Slovenský profesori</li>
+                            <li><a href="https://ucp.cz/en/profil/doc-phdr-jan-eichler-phd/">Eichler</a>,<a href="https://www.linkedin.com/in/roman-laml-7212936a/?originalSubdomain=sk">Laml</a>,
+                            <a href="https://sk.wikipedia.org/wiki/Daniel_%C5%A0mihula">Šmihula</a>,<a href="https://sk.wikipedia.org/wiki/Eva_Ja%C5%A1%C5%A1ov%C3%A1">Jaššová</a>,
+                            <a href="https://sk.wikipedia.org/wiki/Ivo_Hlav%C3%A1%C4%8Dek_(diplomat)">Hlaváček</a>,<a href="https://www.fm.uniba.sk/pracoviska/katedry/katedra-medzinarodneho-manazmentu/pracovnici-katedry/daniela-novackova/">Nováčková</a>,
+                            <a href="https://ims.fsv.cuni.cz/institut/katedra-ruskych-vychodoevropskych-studii/lide/phdr-jan-sir-phd">Šír</a>,<a href="https://sk.wikipedia.org/wiki/Peter_Juza">Juza</a>,
+                            <br>len malý zoznam z mnohých, pod ktorých vedením som mal tú česť byť</li>
+                            <li>Škola s potenciálom, ktorá skončila pre mamonárstvo</li>
+                        </ul>
+                        <br>
                         <a href="https://www.postovabanka.sk/">
                             <img src="img/pbT.jpg" alt="">
-                        </a><br>
-                        <a href="https://www.pflegeheim-beer.com/">
-                            <img src="img/beerT.jpg" alt="">
-                        </a><br>
+                        </a>
+                        <ul class="pdata">
+                            <li>Prvé zamestnanie</li>
+                            <li>Dobrá škola a skúsenosť</li>
+                            <li>Nezabudnuteľné školenia na skúšky v NBS</li>
+                            <li>Práca kde som sa naučil, že všetko je o ľuďoch,<br>
+                                po odchode nadriadeného som odišiel tiež</li>
+                        </ul>
+                        <br>
                         <a href="https://de.wikipedia.org/wiki/Neulengbach">
                             <img src="img/neulengbachT.jpeg" alt="">
                         <a href="https://www.rehau.com/at-de">
-                        </a><br>
+                        </a>
+                        <ul class="pdata">
+                            <li>Od roku 2014 môj exilový domov</li>
+                            <li>Miesto kde som sa stal otcom</li>
+                            <li>Príjemné mestečko kde sa pomaly každý pozná</li>
+                        </ul>
+                        <br>
+                        <a href="https://www.pflegeheim-beer.com/">
+                            <img src="img/beerT.jpg" alt="">
+                        </a>
+                        <ul class="pdata">
+                            <li>2014 - 2016</li>
+                            <li>Prvá práca v Rakúsku</li>
+                            <li>Práca v kuchyni so všetkým,čo ktomu patrí</li>
+                            <li>Moja nemčinárka plakala, zo zdesenia, aj od smiechu,<br>
+                                no naučil som sa impovizovať za pochodu a rozmýšľať <br>
+                             o veciach inak (Malé zelené guľky = hrášok)</li>
+                        </ul>
+                        <br>
                             <img src="img/rehauT.jpg" alt="">
-                        </a><br>
+                        </a>
+                        <ul class="pdata">
+                            <li>2018 - 2020</li>
+                            <li>Technická nemčina, veeeľká sranda, hlavne v kombinácii s dialektom</li>
+                            <li>Skvelá partia ľudí s ktorými sastále stretávam</li>
+                            <li>Zas a znova, ťažká práca a nočné môžu byť sranda so správnymi ľuďmi</li>
+                            <li>Ďalšia škola, aj keď negatívna, v skresľovaní<br>
+                                štatistík a zavretia prevádzky</li>
+                        </ul>
+                        <br>
                         <a href="https://www.geberit.at/ueber-uns/geberit-oesterreich/">
                             <img src="img/geberitT.png" alt="">
-                        </a><br>
+                        </a>
+                        <ul class="pdata">
+                            <li>2020 - 2023</li>
+                            <li>Väčšie prepojenie manuálnych a IT zručností,<br>
+                                pre väčšie zapojenie SAP systémov do výroby procesov</li>
+                            <li>Prvé skúsenosti s riadením menšej skupiny pracovníkov<br>
+                                na nižšej manažérskej úrovni</li>
+                            <li>Veľa správnych ľudí, žiaľ aj jeden nesprávny a ten stačil až až</li>
+                        </ul>
+                        <br>
                         <a href="https://skillmea.sk/">
                             <img src="img/sklT.png" alt="">
-                        </a><br>
+                        </a>
+                        <ul class="pdata">
+                            <li>Nová výzva o ktorej som už dávno rozmýšľal, ale vždy bolo<br>
+                                niečo dôležitejšie</li>
+                            <li>Java, HTML, CSS, Git a ďalšie pribudnú</li>
+                            <li>Visual Studio (Top za mňa), IntelliJ IDEA, GitHub, GameMaker Studio</li>
+                        </ul>
+                        <br>
                         <a href="https://github.com/H0rar">
                             <img src="img/githubT.png" alt="">
                         </a>
-                        
+                        <ul class="pdata">
+                            <li>Zatiaľ pár vecí ktoré som spravil a raz sa na nich asi zasmejem</li>
+                        </ul>
+                    </div>
+
+                    <div class="gallery">
+                        <a href="img/foto/sunny_home.jpg">
+                            <img src="img/foto/thumb/sunny_homeT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/inversion_home.JPG">
+                            <img src="img/foto/thumb/inversion_homeT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/moto.jpg">
+                            <img src="img/foto/thumb/motoT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/MGR-done.jpg">
+                            <img src="img/foto/thumb/MGR-doneT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/KG.JPG">
+                            <img src="img/foto/thumb/KG_11T.jpg" alt="">
+                        </a>
+                        <a href="img/foto/together.jpg">
+                            <img src="img/foto/thumb/togetherT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/svatba_all.JPG">
+                            <img src="img/foto/thumb/svatba_allT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/svatba_SVK.JPG">
+                            <img src="img/foto/thumb/svatba_SVKT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/svatba_KG.JPG">
+                            <img src="img/foto/thumb/svatba_KGT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/hike.JPG">
+                            <img src="img/foto/thumb/hikeT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/home_snooowy.jpg">
+                            <img src="img/foto/thumb/home_snooowyT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/second.jpg">
+                            <img src="img/foto/thumb/secondT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/rehau.jpg">
+                            <img src="img/foto/thumb/rehauT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/rehauKolege.jpg">
+                            <img src="img/foto/thumb/rehauKolegeT.jpg" alt="">
+                        </a>
+                        <a href="img/foto/geberit_fun.jpg">
+                            <img src="img/foto/thumb/geberit_funT.jpg" alt="">
+                        </a>
                     </div>
 
                 </div>
@@ -151,7 +287,7 @@
         </div>
     </footer>
 
-<body>
+
     
 </body>
 </html>

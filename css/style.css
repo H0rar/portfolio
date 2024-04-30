@@ -6,6 +6,23 @@ body {
     -webkit-font-smoothing: antialiased;
 
 }
+/*PROGRESS BAR*/
+.progress {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 10px;
+	background-color: rgba(0, 0, 0, .1);
+	background-color: rgba(108, 210, 18, 0.662);
+	-webkit-appearance: none;
+	appearance: none;
+	transform-origin: top left; 
+	transform: scaleX(0);
+	transition: .15s transform linear;
+	will-change: transform;
+    z-index: 999;
+}
 
 .container:before,
 .group:before,
@@ -58,7 +75,7 @@ strong {
 
 /*CONTACT*/
 .contact-bar,
-.personal a {
+.personal a{
     color: #fff;
 }
 
@@ -175,7 +192,7 @@ strong {
     background: url('../img/cover.jpeg') center  no-repeat;
 }
 
-.post-title {
+.post-title a {
     color: #fff;
     font-size: 45px;
     font-weight: 600;
@@ -198,7 +215,7 @@ strong {
     display: inline-block;
     letter-spacing: -2px;
     margin-top: 230px;
-    margin-left: 268px;
+    margin-left: 317px;
     
 }
 
@@ -212,6 +229,12 @@ strong {
     font-weight: 400;
     font-size: 30px;
     line-height: 42px;
+}
+
+.controls {
+    width: 642px;
+    margin: 50px auto;
+    text-align: center;
 }
 
 .controls {
@@ -255,11 +278,20 @@ strong {
 .gallery-about img {
 	vertical-align: left;
 }
-.gallery-about .pdata {
-    vertical-align: top;
+.pdata {
+    display: block;
+    width: 500px;
     float: right;
-    margin-right: 550px;
-    
+    color: #323232;
+}
+
+.pdata a {
+    color: #000000;
+}
+
+.pdata a:hover,
+.pdata a:focus {
+    text-decoration: underline;
 }
 /*FOOTER*/
 .pre-footer {

@@ -20,6 +20,24 @@
     <![endif]-->
 </head>
 <body>
+    <div class="progress" v-show="showProgress"></div>
+    <script >
+        var better = document.querySelector('.progress');
+        var max = document.body.scrollHeight - innerHeight;
+        var scheduled = false;
+    
+        addEventListener('scroll', function() {
+            max = document.body.scrollHeight - innerHeight; 
+            if ( !scheduled ) {
+                scheduled = true;
+                setTimeout(function() {
+                    scheduled = false;
+                    var percent = (pageYOffset / max);
+                    better.style.transform = 'scaleX(' + percent + ')';
+                }, 100);
+            }
+        });
+    </script>
     <header>
         <div class="contact-bar">
             <div class="container">
