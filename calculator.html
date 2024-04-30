@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+        .key {
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+        }
+        .key:hover {
+            background-color: #e9e9e9;
+        }
+        .output {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: right;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="output" id="output">0</div>
+        <div class="keys">
+            <div class="key" onclick="appendNumber('7')">7</div>
+            <div class="key" onclick="appendNumber('8')">8</div>
+            <div class="key" onclick="appendNumber('9')">9</div>
+            <div class="key" onclick="appendOperator('+')">+</div>
+            <div class="key" onclick="appendNumber('4')">4</div>
+            <div class="key" onclick="appendNumber('5')">5</div>
+            <div class="key" onclick="appendNumber('6')">6</div>
+            <div class="key" onclick="appendOperator('-')">-</div>
+            <div class="key" onclick="appendNumber('1')">1</div>
+            <div class="key" onclick="appendNumber('2')">2</div>
+            <div class="key" onclick="appendNumber('3')">3</div>
+            <div class="key" onclick="appendOperator('*')">*</div>
+            <div class="key" onclick="appendNumber('0')">0</div>
+            <div class="key" onclick="clearOutput()">C</div>
+            <div class="key" onclick="calculate()">=</div>
+            <div class="key" onclick="appendOperator('/')">/</div>
+        </div>
+    </div>
+
+    <script>
+        let output = document.getElementById('output');
+        let expression = '';
+
+        function appendNumber(number) {
+            expression += number;
+            output.innerText = expression;
+        }
+
+        function appendOperator(operator) {
+            expression += operator;
+            output.innerText = expression;
+        }
+
+        function clearOutput() {
+            expression = '';
+            output.innerText = '0';
+        }
+
+        function calculate() {
+            try {
+                let result = eval(expression);
+                output.innerText = result;
+                expression = result.toString();
+            } catch (error) {
+                output.innerText = 'Error';
+                expression = '';
+            }
+        }
+    </script>
+</body>
+</html>
