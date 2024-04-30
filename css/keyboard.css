@@ -1,0 +1,112 @@
+/* KEYBOARD */
+.keyboard {
+	display: grid;
+	gap: 1px;
+	margin: 5px 0 10px;
+    position: relative;
+}
+
+.keyboard .row,
+.keyboard .winner {
+	display: flex;
+	justify-content: center;
+	gap: 1px;
+	margin-bottom: 1px;
+
+	touch-action: manipulation;
+
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.keyboard .winner {
+	display: none;
+	position: fixed;
+	bottom: 1.5rem;
+	z-index: 10;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.keyboard .tile {
+	width: 2rem;
+	height: 3rem;
+
+	color: #000;
+	font-weight: 900;
+	font-size: 1rem;
+
+	border-width: 1px;
+	border-radius: 6px;
+	box-shadow: 1px 1px 0px #000;
+	border-color: #565758;
+
+	cursor: pointer;
+	z-index: 5;
+}
+
+.keyboard button {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+/* BACKGROUND COLORS */
+.keyboard .tile:not(.present, .correct, .wrong, .double) {
+	background: #e9e9ed;
+}
+
+.keyboard .tile:not(.present, .correct, .wrong, .double):hover,
+.keyboard .tile:not(.present, .correct, .wrong, .double):active {
+	background: #d0d0d7;
+}
+
+.keyboard .tile.correct,
+.keyboard .tile.present,
+.keyboard .tile.wrong {
+	color: white;
+	border: 1px solid #121213;
+}
+
+.keyboard .double {
+    width: 3.75rem;
+	background: #bbbbbb;
+}
+
+.keyboard .large {
+    width: 10rem;
+	display: flex;
+}
+
+.keyboard .enter {
+    font-size: 0.75rem;
+}
+
+/* KEYBOARD RESPONSIVE */
+@media only screen and (min-width: 600px) and (min-height: 700px) {
+
+	.keyboard .row {
+        margin-bottom: 2px;
+        gap: 2px;
+    }
+
+    .keyboard .tile {
+		font-size: 1.5rem;
+		width: 2.75rem;
+    	height: 3.75rem;
+	}
+
+    .keyboard .double {
+        width: 6rem;
+    }
+
+    .keyboard .large {
+        width: 14rem;
+    }
+
+    .keyboard .enter {
+        font-size: 1rem;
+    }
+
+}

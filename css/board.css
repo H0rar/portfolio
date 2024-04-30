@@ -1,0 +1,51 @@
+.board {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.tile {
+    font-size: 2rem;
+    font-weight: 720;
+    text-transform: uppercase;
+
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    
+    border: 2px solid #cbd9d670;
+    background: #051548;
+}
+
+.is-filled {
+   border-color: #ffffff; 
+}
+
+.present {
+    border-color: #d5f503e3;
+    background-color: #d5f503e3;
+}
+
+.correct {
+    border-color: #03f513e3;
+    background-color: #03f513e3;
+}
+
+.wrong {
+    border-color: #f50303e3;
+    background-color: #f50303e3;
+}
+/*RESPONSIVE*/
+@media only screen and ((max-width: 600px) or (max-height: 600px)) {
+	.tile {
+		width: 3rem;
+		height: 3rem;
+	    line-height: 3rem;
+	}
+}
