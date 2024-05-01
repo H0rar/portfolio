@@ -82,8 +82,7 @@
             <div class="post-content">
                 <div class="container">
 
-                    <h2 class="text-center">veta, kde sa hovorí
-                         o tebe a tvojej sikovnosti /osobnosti</h2>
+                   
                     
                     <ul class="menu controls"> 
                         <li><a href="https://github.com/H0rar" >Certifikáty</a></li>
@@ -93,15 +92,12 @@
                     </ul>
 
                     <div class="container-send">
-                        <h3>Kontaktný formulár</h3>
-                        <form id="contact-form">
-                            <label for="email">Tvoj Email:</label>
-                            <input type="email" id="email" name="email" required>
-                
-                            <label for="message">Správa:</label>
-                            <textarea id="message" name="message" required></textarea>
-                
-                            <button type="submit">Odoslať Správu</button>
+                        <h3>Poslať správu</h3>
+                        <form id="emailForm">
+                            <label for="email">Zadaj: dusan@h0rar.sk</label>
+                            <input type="email" id="email" placeholder=" ">
+                            <textarea id="message" rows="4" placeholder="Správa"></textarea>
+                            <button type="submit" id="sendEmail">Poslať</button>
                         </form>
                         <div id="status"></div>
                     </div>

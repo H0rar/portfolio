@@ -1,15 +1,20 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = $_POST["email"];
-    $subject = "Testovací email";
+    $to = "dusanrohar@gmail.com";
+    $from = $_POST["email"];
     $message = $_POST["message"];
-    $headers = "From: dusanrohar@gmail.com"; // Zadajte svoju emailovú adresu
-    $headers .= "Content-type: text/plain; charset=UTF-8";
+    $subject = "Nová správa";
 
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Email bol úspešne odoslaný!";
+    $headers = "From: $from\r\n";
+    $headers .= "Reply-To: $from\r\n";
+    $headers .= "Content-type: text/html\r\n";
+
+    $result = mail($to, $subject, $message, $headers);
+
+    if ($result) {
+        echo "Správa bola odoslaná!";
     } else {
-        echo "Nastala chyba pri odosielaní emailu!";
+        echo "Správa nebola odoslaná!";
     }
 }
 ?>
