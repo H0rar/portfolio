@@ -35,6 +35,7 @@
             background-color: #e9e9e9;
         }
         .output {
+            height: 30px;
             font-size: 24px;
             margin-bottom: 10px;
             text-align: right;
@@ -42,6 +43,11 @@
             padding: 10px;
             border-radius: 3px;
             background-color: #f9f9f9;
+            grid-column: span 4;
+        }
+        .red-key {
+            background-color: #ff5555 !important;
+            color: #fff;
         }
     </style>
 </head>
@@ -49,6 +55,10 @@
     <div class="calculator">
         <div class="output" id="output">0</div>
         <div class="keys">
+            <div class="key red-key" onclick="deleteLastNumber()">C</div>
+            <div></div>
+            <div></div>
+            <div></div>
             <div class="key" onclick="appendNumber('7')">7</div>
             <div class="key" onclick="appendNumber('8')">8</div>
             <div class="key" onclick="appendNumber('9')">9</div>
@@ -62,7 +72,7 @@
             <div class="key" onclick="appendNumber('3')">3</div>
             <div class="key" onclick="appendOperator('*')">*</div>
             <div class="key" onclick="appendNumber('0')">0</div>
-            <div class="key" onclick="clearOutput()">C</div>
+            <div class="key" onclick="appendDecimal('.')">.</div>
             <div class="key" onclick="calculate()">=</div>
             <div class="key" onclick="appendOperator('/')">/</div>
         </div>
@@ -82,9 +92,16 @@
             output.innerText = expression;
         }
 
-        function clearOutput() {
-            expression = '';
-            output.innerText = '0';
+        function appendDecimal(decimal) {
+            if (!expression.includes('.')) {
+                expression += decimal;
+                output.innerText = expression;
+            }
+        }
+
+        function deleteLastNumber() {
+            expression = expression.slice(0, -1);
+            output.innerText = expression;
         }
 
         function calculate() {
