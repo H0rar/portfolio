@@ -93,6 +93,14 @@ strong {
     float: left;
 }
 
+.translate {
+    margin-top: 33px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    float: left;
+}
+
 .social {
     margin-top: 18px;
     float: right;
@@ -106,6 +114,20 @@ strong {
     font-size: 28px; 
     margin-right: 5px;   
 }
+
+
+
+.translate-icon {
+    height: 30px;
+    width: 35px;
+    color: #989898;
+    background: #eeefed;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 2px; /* Upraveno */
+    margin-right: 2px; /* Upraveno */
+}
+
 
 .social .fa {
     font-size: 17px;    
@@ -431,12 +453,12 @@ button:hover {
     text-align: center;
     font-weight: bold;
 }
-/* TABLETS */
+/* TABLET */
 
 @media (max-width: 768px) {
     .container {
-        width: 90%;
-        padding: 0 20px;
+        width: 90%; 
+        padding: 0 20px; 
     }
 
     .navigation,
@@ -445,69 +467,69 @@ button:hover {
     .menu li,
     .post-title a,
     .post-title-first {
-        float: none;
-        width: auto;
-        margin: 0 auto;
-        text-align: center;
+        float: none; 
+        width: auto; 
+        margin: 0 auto; 
+        text-align: center; 
     }
 
     .navigation li {
-        display: block;
-        border-left: none;
+        display: block; 
+        border-left: none; 
     }
 
     .logo a {
-        margin-top: 0;
+        margin-top: 0; 
     }
 
     .post-content h2,
     .pdata,
     .pre-footer .container,
     footer p {
-        float: none;
-        text-align: center;
-        padding: 0;
+        float: none; 
+        text-align: center; 
+        padding: 0; 
     }
 
     .gallery a,
     .gallery img,
     .gallery-about img {
-        width: 100%;
-        height: auto;
+        width: 100%; 
+        height: auto; 
     }
 }
 
-/*MOBILE*/
+/* MOBIL DEVICES */
 
 @media (max-width: 480px) {
     .contact-bar,
     .nav-bar {
-        height: auto;
-        padding: 10px 0;
+        height: auto; 
+        padding: 10px 0; 
     }
 
     .personal li,
     .social-icon,
     .controls a,
     .post-header {
-        margin: 0 auto;
-        width: 100%;
+        margin: 0 auto; 
+        width: 100%; 
     }
 
     .post-title a,
     .post-title-first {
-        font-size: 20px;
-        padding: 10px;
-        margin: 20px auto;
+        font-size: 20px; 
+        padding: 10px; 
+        margin: 20px auto; 
     }
 
     .pre-footer .container,
     footer .menu {
-        width: auto;
-        padding: 20px;
+        width: auto; 
+        padding: 20px; 
     }
 
-    .footer p {
-        padding-left: 20px;
+    footer p {
+        padding-left: 20px; 
     }
 }
