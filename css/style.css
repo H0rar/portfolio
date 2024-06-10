@@ -99,6 +99,7 @@ strong {
     list-style: none;
     justify-content: center;
     float: left;
+    text-align: center;
 }
 
 .social {
@@ -120,13 +121,18 @@ strong {
 .translate-icon {
     height: 30px;
     width: 35px;
-    color: #989898;
+    color: #070606;
     background: #eeefed;
     text-align: center;
     border-radius: 2px;
     margin-left: 2px; 
     margin-right: 2px; 
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 
 .social .fa {
@@ -218,6 +224,11 @@ strong {
     background: url('../img/cover.jpeg') center  no-repeat;
 }
 
+.post-title {
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+}
 .post-title a {
     color: #fff;
     font-size: 45px;
@@ -225,11 +236,12 @@ strong {
     background: #de5728;
     padding: 18px 46px;
     border-radius: 7px;
-    display: inline-block;
+    display: flex;
     text-transform: uppercase;
     letter-spacing: -2px;
     margin-top: 36px;
-    margin-left: 400px;
+    justify-content: center;
+    text-align: center;
 }
 .post-title-first {
     color: #fff;
@@ -256,26 +268,25 @@ strong {
     line-height: 42px;
 }
 
-.controls {
-    width: 642px;
-    margin: 50px auto;
-    text-align: center;
-}
 
 .controls {
     width: 642px;
     margin: 50px auto;
     text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
 .controls a {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 300;
     color: #39a3d4;
     text-transform: uppercase;
     padding: 0 25px;
     line-height: 48px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .controls a:hover,
