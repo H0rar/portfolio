@@ -124,8 +124,8 @@ strong {
     background: #eeefed;
     text-align: center;
     border-radius: 2px;
-    margin-left: 2px; /* Upraveno */
-    margin-right: 2px; /* Upraveno */
+    margin-left: 2px; 
+    margin-right: 2px; 
 }
 
 
@@ -229,7 +229,7 @@ strong {
     text-transform: uppercase;
     letter-spacing: -2px;
     margin-top: 36px;
-    margin-left: 270px;
+    margin-left: 400px;
 }
 .post-title-first {
     color: #fff;
@@ -269,7 +269,7 @@ strong {
 }
 
 .controls a {
-    font-size: 26px;
+    font-size: 25px;
     font-weight: 300;
     color: #39a3d4;
     text-transform: uppercase;
