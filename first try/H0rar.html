@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H0rar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="progress" v-show="showProgress"></div>
+        <div class="container">
+            <button @click="changeBackground" class="pulse-button" v-if="showButton">Rock this way</button>
+        </div>
+        <ul class="image-grid" v-show="!showButton">
+            <li v-for="(image, index) in images" :key="index" class="image-item" :style="{ animationDelay: (index * 0.5) + 's' }">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img :src="image.src" :alt="'Image ' + (index + 1)">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>{{ image.text }}</p>
+                        </div>
+                    </div>
+                </div>
+            </li> 
+        </ul>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="js/app.js"></script>
+
+    
+
+    <script >
+        var better = document.querySelector('.progress');
+        var max = document.body.scrollHeight - innerHeight;
+        var scheduled = false;
+    
+        addEventListener('scroll', function() {
+            max = document.body.scrollHeight - innerHeight; 
+            if ( !scheduled ) {
+                scheduled = true;
+                setTimeout(function() {
+                    scheduled = false;
+                    var percent = (pageYOffset / max);
+                    better.style.transform = 'scaleX(' + percent + ')';
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
